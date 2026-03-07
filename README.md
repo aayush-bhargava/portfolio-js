@@ -2,6 +2,8 @@
 
 Welcome to the repository for my personal 3D interactive portfolio! This project is a deeply immersive, experiential showcase of my skills, professional journey, and side projects, built using cutting-edge 3D web technologies.
 
+View live at : aayush-bhargava.vercel.app
+
 ## Overview
 
 Unlike a traditional scrolling webpage, this portfolio drops the user into a dynamic 3D environment. Navigation is handled through zooming into specific elements (portals or "tiles") placed within the scene, creating a sense of depth and exploration.
