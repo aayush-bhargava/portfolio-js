@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  /* Slate 50 */
+  --foreground: #020617;
+  /* Slate 950 */
+  --secondary: #64748b;
+  /* Slate 500 */
+  --accent: #10b981;
+  /* Emerald 500 */
+  --glass: rgba(255, 255, 255, 0.7);
+  --scrollbarColor: #10b981;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020617;
+    /* Slate 950 */
+    --foreground: #f8fafc;
+    /* Slate 50 */
+    --secondary: #94a3b8;
+    /* Slate 400 */
+    --accent: #10b981;
+    /* Emerald 500 */
+    --glass: rgba(2, 6, 23, 0.7);
+    --scrollbarColor: #10b981;
+  }
+}
+
+* {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+body {
+  overscroll-behavior: none;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-vercetti), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  left: 32px;
+  top: 32px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .close {
+    margin-left: -24px;
+    margin-top: -16px;
+  }
+}
+
+.close:hover {
+  opacity: 1;
+}
+
+.close:before,
+.close:after {
+  position: absolute;
+  left: 2rem;
+  content: ' ';
+  height: 48px;
+  width: 2px;
+  background-color: #0a0a0a;
+}
+
+.close:before {
+  transform: rotate(45deg);
+}
+
+.close:after {
+  transform: rotate(-45deg);
+}
