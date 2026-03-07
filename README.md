@@ -2,7 +2,8 @@
 
 Welcome to the repository for my personal 3D interactive portfolio! This project is a deeply immersive, experiential showcase of my skills, professional journey, and side projects, built using cutting-edge 3D web technologies.
 
-View live at : aayush-bhargava.vercel.app
+View live at :
+https://aayush-bhargava.vercel.app
 
 ## Overview
 
