@@ -1,11 +1,14 @@
-import { ScrollControls, useTexture, Float } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { ScrollControls, useTexture } from "@react-three/drei";
+import { useFrame, useThree } from "@react-three/fiber";
 import { usePortalStore, useScrollStore } from "@stores";
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import Timeline from "./Timeline";
+import TimelineMobile from "./TimelineMobile";
 
 const Work = () => {
+  const { viewport } = useThree();
+  const isMobileView = viewport.width < 10;
   const isActive = usePortalStore((state) => state.activePortalId === 'work');
   const { scrollProgress, setScrollProgress } = useScrollStore();
   const backdropRef = useRef<THREE.Mesh>(null);
@@ -61,7 +64,11 @@ const Work = () => {
       </mesh>
 
       <ScrollControls style={{ zIndex: -1 }} pages={2} maxSpeed={0.4}>
-        <Timeline progress={isActive ? scrollProgress : 0} />
+        {isMobileView ? (
+          <TimelineMobile progress={isActive ? scrollProgress : 0} />
+        ) : (
+          <Timeline progress={isActive ? scrollProgress : 0} />
+        )}
       </ScrollControls>
     </group>
   );

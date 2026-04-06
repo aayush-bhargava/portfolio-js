@@ -2,10 +2,9 @@
 
 import { useScrollStore } from '@/app/stores/scrollStore';
 import { useProgress } from '@react-three/drei';
-import { usePortalStore, useThemeStore } from '@stores';
+import { usePortalStore } from '@stores';
 import gsap from 'gsap';
 import { useEffect, useRef, useState } from 'react';
-import { isMobile } from 'react-device-detect';
 
 const ResumeButton = () => {
     const buttonRef = useRef<HTMLDivElement>(null);
